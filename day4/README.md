@@ -35,3 +35,11 @@ xy = np.loadtxt('aa.csv', delimiter=',', dtype=np.float32)
 
 # Queue runner 
 - 파일의 크기가 너무 커서 numpy로 메모리에 올리기 부담스러울때!
+- 여러개 파일을 큐로 넣었다가 리더로 넣어서 
+- 읽을 만큼 배치를 나눠서 학습시킨다. 
+
+## shuffle_batch
+- batch 읽을때 셔플이 됫으면 한다. 
+```
+tf.train.shuffle_batch(...)
+```
